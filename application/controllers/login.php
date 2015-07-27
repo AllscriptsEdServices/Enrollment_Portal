@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 		$loginStatus = $this->login_model->doLogin($mail, $password);
 
 		echo $loginStatus;
-	
+		//THis is to redirect to home page
 		/*redirect("entry", 'refresh');
 		if($loginStatus=="Fail"){
 			echo $loginStatus;
