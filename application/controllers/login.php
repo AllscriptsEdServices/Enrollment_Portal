@@ -25,6 +25,7 @@ class Login extends CI_Controller {
 
 		echo $loginStatus;
 		//THis is to redirect to home page
+		//Added by Megha
 		/*redirect("entry", 'refresh');
 		if($loginStatus=="Fail"){
 			echo $loginStatus;
