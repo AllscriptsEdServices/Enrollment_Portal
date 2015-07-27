@@ -1,0 +1,250 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Calibri', 'Candara', 'Segoe', "Segoe UI", 'Optima', Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    margin:0px;
+    padding:0px;
+    min-height: 100%;
+    position: relative;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    /*text-transform: uppercase;    */
+    /*background-color: transparent!important;*/
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    padding: 0px 30px;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li.active {
+    outline: none;
+    color:#7ab800!important;
+    background-color: rgba(255,255,255,.3);
+    background-color: transparent!important;
+}
+.navbar-custom .nav li.disabled {
+    outline: none;
+    color:#999!important;
+    background-color: rgba(255,255,255,.3);
+    background-color: transparent!important;
+}
+
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #7ab800!important;
+  background-color:transparent;
+}
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+  color: #999!important;
+  background-color:transparent;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.dropdown .dropdown-menu li a{  
+  font-size:14px!important;
+  text-decoration: none;
+  font-weight: normal;
+  color:#000!important;
+  line-height: 30px;
+  height: 30px;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a.active {
+    outline: 0;
+    color:#7ab800!important;
+    /*background-color: rgba(255,255,255,.3);*/
+    background: transparent;
+}
+
+.navbar-nav{
+	margin-right: 10px!important;
+}
+.navbar-nav li a {
+	font-family: "Lato";
+    line-height: 65px;
+    height: 65px;
+    padding-top: 0;
+    font-weight: bold;
+    font-size:14px;
+    color:#fff!important;
+    background-color: transparent;
+
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #000;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+}
+
+
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/Background-Menu.png) no-repeat center center scroll;    
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/*.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}*/
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px;
+}
+
+.top-buffer{
+    margin-top: 40px;
+}
+
+#customise_div{
+	margin-top: 150px;
+}
+
+#video_div{
+	margin-top:30px;
+}
+
+#buttons_div{
+	width:300px;
+	height: auto;
+	margin:auto;
+	margin-top:20px;
+}
+
+
+.giant-font{
+	/*font-family: "Avenir LT Std - 85 Heavy", Arial;*/
+	font-family: "Lato";
+	font-size: 55px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.instruction-font{
+	/*font-family: "Avenir LT CE – 65 Medium", Arial;*/
+	font-family: "Lato";
+	font-size: 20px;
+}
+
+.play_btn{
+	background: transparent;
+    border: transparent;   
+    margin-left:30px;
+    width:79px;
+    height:94px;
+    outline: none!important;
+    background-image: url('../img/Play-Button-Up.png');
+}
+
+.play_btn:hover{
+	background-image: url('../img/Play-Button-Over.png');
+}
+
+.skip_btn{
+	background: transparent;
+    border: transparent;   
+    margin-left:30px;
+    width:79px;
+    height:94px;
+    outline: none!important;
+    background-image: url('../img/Skip-Button-Up.png');
+}
+.skip_btn:hover{
+	background-image: url('../img/Skip-Button-Over.png');
+}
+
+@media(max-width:1200px) {
+	.giant-font{	
+		font-size: 50px;	
+	}
+
+	.instruction-font{
+		font-family: "Avenir LT CE – 65 Medium", Arial;
+		font-size: 18px;
+	}
+
+}
+
+.company-footer{
+  position:absolute;
+  right:0px;
+  bottom: 0px;
+  display: block;
+  margin-top:30px;
+  height:auto;
+  color:#fff;
+  font-size: 14px;  
+  text-align: right;
+  padding: 6px;
+  background: transparent;
+}

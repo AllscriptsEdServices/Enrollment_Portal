@@ -1,0 +1,126 @@
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Calibri";
+    background-color: #000;
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+	background-color: transparent;
+}
+.intro {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /*padding: 100px 0;*/
+    /*text-align: center;*/
+    color: #fff;
+    /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
+    background: url(../img/Background-Menu.png) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-head {
+    padding:20px 0px;
+}
+
+.intro .intro-footer{
+	position:absolute;
+	bottom:10px;
+	right:0px;
+}
+
+.intro .intro-body {	
+    /*display: table-cell;
+    vertical-align: middle;*/
+}
+
+input[type="text"]{
+	/*height:100px;*/
+}
+
+.loginDiv{
+	background: url(../img/Login-Popup.png) no-repeat ;
+	width:747px;
+	height:460px;
+	margin:auto;
+	position:relative;
+}
+
+.loginDiv .title{
+	color:#333; 
+	font-size:18px; 
+	padding:10px; 
+	text-align:center; 
+	font-weight:bold
+}
+
+.loginDiv .form-fields{
+	width:100%;
+	padding:137px 170px;
+}
+
+.loginDiv .form-fields a{
+	color:#666;
+}
+
+.loginBtn{	
+	position:absolute;
+	top:238px;
+	right:130px;
+	background: url("../img/Login Button.png") no-repeat ;
+	width:229px;
+	height: 108px;
+	
+	cursor:pointer;
+}
+
+.loginBtn:hover{
+	background: url("../img/Login Button_Over.png") no-repeat ;
+}
+
+.login-label{
+	background-color: transparent;
+	border:transparent;
+	position: absolute;
+	top:82px;
+	left:63px;
+	height: 27px;
+	width:148px;
+	text-align: center;
+	font-weight: bold;
+	color:#fff;
+	font-size: 17px;
+}
+
+.loadingDiv{
+  background-color:#F0F0F0;
+  margin: 20px 0px;
+  padding: 10px; 
+  text-align:center;
+  color:#333;
+  display: none;
+}
+
+.messageBox{
+ margin: 20px 0px;
+ padding: 10px;
+ display: none;
+}
+
+.bg-correct{
+	background-color:#BDFFAB;
+	color:#333;
+}
+.bg-error{
+	background-color:#FFC1C1;
+	color:#333;
+}
