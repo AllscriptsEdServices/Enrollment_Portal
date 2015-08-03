@@ -48,24 +48,21 @@
 <nav class = "navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class ="navbar-brand" href="<?php echo base_url("index.php/introduction"); ?>"> Allscripts Learning Center Enrollment Form </a>
+      <a class ="navbar-brand" href="scmlogon.html"> Allscripts Learning Center Enrollment Form </a>
     </div>  
-    <div>
-    <ul id="mainNav" class="nav navbar-nav navbar-right">
-      <li id="nav_intro"><a href="<?php echo base_url("index.php/introduction"); ?>"> Introduction</a></li>
-      <li id="nav_users"><a href="<?php echo base_url("index.php/users"); ?>">Users</a></li>
-      <li id="nav_requests"><a href="<?php echo base_url("index.php/requests"); ?>">Requests</a></li>
-    
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $userDetails["first_name"] ?> <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Profile </a></li>
-            <li><a href="#">Log out</a></li>
-          </ul>
-        </li>
-    
-     </ul>
-    </div>
+    <!-- <div>
+      <ul id="mainNav" class="nav navbar-nav navbar-right">      
+      
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Welcome<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="#">Profile </a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </li>
+      
+       </ul>
+    </div> -->
   </div>
 </nav>  
 

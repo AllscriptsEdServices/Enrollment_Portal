@@ -1,16 +1,10 @@
 
 <header class="intro">
-	<div class="intro-head">
-		<div class="container-fluid">
-			<div clas="row">
-				<img src="<?php echo base_url("assets/img/Logo.png"); ?>" />
-			</div>
-		</div>
-	</div>
+	
     <div class="intro-body">
         <div class="container">
             <div class="row">            	
-            	<div class="column col-md-8 col-md-offset-2">
+            	<div class="column col-md-6 col-md-offset-3">
             		<form class="" action="javascript:fnLogin()">
 
 	            		<div class="loginDiv">
@@ -19,7 +13,7 @@
 	            				<div class="title" style="">Administrator Login</div>
 								<div class="input-group">										
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-									<input type="email" class="form-control" id="mail" name="mail" placeholder="Enter email" aria-describedby="basic-addon1">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" aria-describedby="basic-addon1">
 								</div>
 							
 								<div class="input-group" style="margin-top:10px;" >					
@@ -37,19 +31,19 @@
 							</div>
 
 							<div class="loginBtn">
-								<button type="submit" class="login-label"  onclick="fnLogin()">Login</button>
+								<button type="submit" class="login-label"  onclick="">Login</button>
 							</div>
 
 							<div class="">
-								<div id="loadingDiv" class="loadingDiv">
+								<div id="loadingDiv" class="loadingDiv" style="display:none">
 								    <img src="<?php echo base_url("assets/img/loader.gif"); ?>" /> Processing..
 								</div>  
 
-								<div id="msgBox" class="messageBox bg-correct">
+								<div id="msgBox" class="messageBox bg-correct" style="display:none">
 								    Your changes have been saved. You may close this dialog now.		      
 								</div>
 
-								<div id="errorBox" class="messageBox bg-error">
+								<div id="errorBox" class="messageBox bg-error" style="display:none">
 								    Enter a valid email address.
 								</div>
 							</div>
@@ -66,13 +60,7 @@
 
     </div> 
 
-    <div class="intro-footer">
-    	<div class="container-fluid">
-    		<div clas="row">
-    			<img src="<?php echo base_url("assets/img/Allscripts-logo-small.png"); ?>" />
-    		</div>
-		</div>
-    </div>   
+  
 
 
 </header>
@@ -116,14 +104,14 @@
 
 
 <script type="text/javascript">
-	var baseURL = <?php echo json_encode(base_url("index.php/login/")) ?>;
+	var baseURL = <?php echo json_encode($baseURL) ?>;
 
-	$('input, textarea').placeholder();
+	//$('input, textarea').placeholder();
 	
 	function fnForgotPassword(){
 		if(validateEmail($("#forgotMail").val()))
 		{
-			var action = baseURL + "/forgotPassword";
+			var action = baseURL + "/login/forgotPassword";
 		    var form_data = {
 		      'forgotMail': $("#forgotMail").val()
 		    };
@@ -133,7 +121,8 @@
 		      	url: action,
 		      	data: form_data,
 		      	success: function(response)
-		      	{		      				      
+		      	{		      	
+
 		      		if(response == "Success"){
 		      			$("#msg-success").removeClass("hidden");
 		      			$("#msg-error").addClass("hidden");
@@ -153,13 +142,13 @@
 	}
 
 	function fnLogin(){
-		if(validateEmail($("#mail").val()))
-		{
+		if(validateEmail($("#email").val()))
+		{			
 			$('#errorBox').hide();
 			$('#loadingDiv').show();
-			var action = baseURL + "/doLogin";
+			var action = baseURL + "/login/doLogin";
 		    var form_data = {
-		      'mail': $("#mail").val(),
+		      'email': $("#email").val(),
 		      'password': $("#password").val()
 		    };
 
@@ -169,16 +158,25 @@
 		      	data: form_data,
 		      	success: function(response)
 		      	{		
-		      		//alert(response); 		      		
-		      		$('#loadingDiv').hide();  		      		
-		      		if(response=="Fail"){
+		      		$('#loadingDiv').hide();
+
+		      		var responseObj = $.parseJSON(response);	     		      		
+		      		 
+		      		if(responseObj.status=="Fail"){
+		      			$('#errorBox').html("Either the email or password is incorrect. Please verify and try again.");
+		      			$('#errorBox').fadeIn();
+		      		}else if(responseObj.status=="Success"){
+		      			$('#errorBox').hide();
+		      			window.location.href = <?php echo json_encode(base_url("index.php/createnew/")) ?>;
+		      		}
+		      		/*if(response=="Fail"){
 		      			$('#errorBox').html("Either the email or password is incorrect. Please verify and try again.");
 		      			$('#errorBox').fadeIn();
 		      		}else{
 		      			//var url = <?php echo json_encode(base_url("index.php/entry/client")) ?> + "/" + response;
 		      			var url = <?php echo json_encode(base_url("index.php/clientlist/getClients")) ?>;
 		      			window.location.href = url;
-		      		}	      		
+		      		}*/  		
 		      		    		
 		      	}
 		    });

@@ -1,0 +1,127 @@
+.create{
+position:relative;
+top: 160px;
+left: 790px;
+}
+#Login{
+margin-left: 280px;
+}
+body{
+overflow-x: hidden;
+position: relative;
+}
+
+.fieldset{
+margin-bottom: 150px;
+border-top: 1px #e3e3e3 solid;
+}
+
+#productversion {
+padding-top: 130px;
+
+}
+.col-sm-10{
+padding-left:0px;
+}
+#productversions {
+padding-left: 10px;
+padding-right: 165px;
+}
+#contact {
+padding-bottom: 30px;
+}
+.form-group{
+padding-left: 26px;
+}
+
+#pleaseselect {
+background-color: #f0d048;
+}
+#prodwarn {
+width: 25%;
+line-height: 10px;
+}
+#login{
+display: block;}
+
+#h5l{
+padding-left: 14px;
+}
+
+#submitok{
+line-height:1px;}
+.nav-tabs{
+border:none;
+}
+
+body {
+background-color: #e3e3e3;}
+
+#welcome {
+font-size: 19.5px;
+color:#2f2f2f;
+}
+#infoword{
+font-size: 20px;
+color:#2f2f2f;
+}
+.box{
+margin-top:40px;
+background-color:white;
+width:800px;
+border: 2.2px solid #4c4c4c ;
+margin-left:40px;
+padding-left: 20px;
+padding-right: 20px;}
+
+#mainbody{
+font-size:15px;
+color: #464646;}
+
+.infosign, .infosign2{
+color:orange;
+font-size: 20px;
+
+}
+.infosign2{
+padding-left: 20px; }
+.spaceforp strong{
+color : #e59400;
+}
+.panel-default{
+
+height: 50px;
+width:217.5px;
+margin-top: 20px;
+float:none;
+background-color:#e8e8e8;
+
+}
+
+.panel-body{
+
+padding-top:10.5px;
+padding-left:7.25px;
+padding-right:0px;}
+
+
+#chseprogpgrph{
+padding-top: 10px;
+font-family: Comic Sans MS;
+font-weight: bold; 
+}
+
+#selprodbutt{
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left:350px;
+}
+.inlineinfosign{
+line-height: 30px;
+font-size: 16px;
+}
+
+#selectversion1, #selectversion2 {
+width: 154px;
+height: 30px;
+}

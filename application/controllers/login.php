@@ -17,24 +17,22 @@ class Login extends CI_Controller {
 
 
 	public function doLogin(){
-		$this->load->model('login_model');
-
-		$mail = $this->input->post('mail');
+		$this->load->model('user_model');
+		
+		$email = $this->input->post('email');
 		$password = $this->input->post('password');
-		$loginStatus = $this->login_model->doLogin($mail, $password);
+		$loginObj = $this->user_model->doLogin($email, $password);
 
-		echo $loginStatus;
-		//THis is to redirect to home page
-		//Added by Megha
-		/*redirect("entry", 'refresh');
-		if($loginStatus=="Fail"){
-			echo $loginStatus;
+		/*if($loginObj["status"]=="Success"){
+			//redirect('createnew', 'refresh');
+			echo anchor('createnew');
 		}else{
-			echo "here";
-			//$url = "entry/client/".$loginStatus;			
-			redirect("entry", 'refresh');
+			echo json_encode($loginObj);
 		}*/
+		
+		echo json_encode($loginObj);		
 	}
+
 
 	function fnLoadPage($page_data){
 
@@ -43,12 +41,12 @@ class Login extends CI_Controller {
 		);
 
 		$header_data['headerfiles'] = $headerfiles;
-		
+		$page_data["baseURL"] = base_url("index.php/");
 		$footer_data["activeTab"] = "login";
 
-		$this->load->view('global/header_login', $header_data);
+		$this->load->view('global/header_nonav', $header_data);
    		$this->load->view('login_view', $page_data);
-   		$this->load->view('global/footer_login', $footer_data);
+   		$this->load->view('global/footer_nonav', $footer_data);
 
 	}
 
@@ -59,6 +57,7 @@ class Login extends CI_Controller {
 		$resetStatus = $this->login_model->resetPassword($mail);
 		echo $resetStatus;
 	}
+
 
 
 }

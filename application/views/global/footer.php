@@ -1,5 +1,5 @@
 <footer class='bottom-footer'>
-	Allscripts Education Services
+	<!-- Allscripts Education Services -->
 </footer>
 
 <script>
@@ -9,7 +9,7 @@
 	});
    
 	$("#mainNav li").removeClass("active");		
-	$("#"+<?php echo json_encode($activeTab) ?>).addClass('active');	
+	$("#"+<?php echo json_encode($activeTab) ?>).addClass('active');
 	
 </script>
 
